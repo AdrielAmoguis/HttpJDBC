@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: http-jdbc-driver
+
+  datasource:
+    url: jdbc:http://your-endpoint.com/execute_sql
+    username: yourUsername
+    password: yourPassword
+    driver-class-name: com.adrielamoguis.utils.http_jdbc_driver.driver_impl.HttpJdbcDriver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+  data:
+    jdbc:
+      dialect: POSTGRESQL

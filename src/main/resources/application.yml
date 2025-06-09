@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: http-jdbc-driver
+
+  datasource:
+    url: jdbc:http://mfcwapentapotnonprodjpe01.azurewebsites.net/execute_sql
+    username: admin
+    password: adminpassword
+    driver-class-name: com.adrielamoguis.utils.http_jdbc_driver.driver_impl.HttpJdbcDriver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+  data:
+    jdbc:
+      dialect: POSTGRESQL
