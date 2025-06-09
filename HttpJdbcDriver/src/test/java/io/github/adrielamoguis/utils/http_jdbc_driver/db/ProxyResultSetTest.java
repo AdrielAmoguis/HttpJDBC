@@ -1,4 +1,4 @@
-package main.java.io.github.adrielamoguis.utils.http_jdbc_driver.db;
+package io.github.adrielamoguis.utils.http_jdbc_driver.db;
 
 import org.junit.jupiter.api.Test;
 import java.sql.SQLException;

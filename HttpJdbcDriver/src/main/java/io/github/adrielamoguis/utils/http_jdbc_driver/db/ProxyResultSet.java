@@ -1,4 +1,4 @@
-package main.java.io.github.adrielamoguis.utils.http_jdbc_driver.db;
+package io.github.adrielamoguis.utils.http_jdbc_driver.db;
 
 import java.io.InputStream;
 import java.io.Reader;

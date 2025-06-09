@@ -1,4 +1,4 @@
-package main.java.io.github.adrielamoguis.utils.http_jdbc_driver;
+package io.github.adrielamoguis.utils.http_jdbc_driver;
 
 import main.java.io.github.adrielamoguis.utils.http_jdbc_driver.db.ProxyDatabaseMetaData;
 import main.java.io.github.adrielamoguis.utils.http_jdbc_driver.db.ProxyPreparedStatement;

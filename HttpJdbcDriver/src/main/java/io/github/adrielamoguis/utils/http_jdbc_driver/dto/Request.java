@@ -1,4 +1,4 @@
-package main.java.io.github.adrielamoguis.utils.http_jdbc_driver.dto;
+package io.github.adrielamoguis.utils.http_jdbc_driver.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
