@@ -83,9 +83,10 @@ public class ProxyPreparedStatement implements PreparedStatement {
     }
 
     private String buildJson() {
+        String formattedSql = formatSqlWithPostgresParams(sql, params.size());
         StringBuilder sb = new StringBuilder();
         sb.append("{\"query\": ");
-        sb.append(escapeJson(sql));
+        sb.append(escapeJson(formattedSql));
         sb.append(", \"params\": [");
         for (int i = 0; i < params.size(); i++) {
             Object param = params.get(i);
@@ -93,6 +94,25 @@ public class ProxyPreparedStatement implements PreparedStatement {
             sb.append(paramToJson(param));
         }
         sb.append("]}");
+        return sb.toString();
+    }
+
+    /**
+     * Replace each '?' in the SQL with $1, $2, ... up to paramCount.
+     */
+    private String formatSqlWithPostgresParams(String sql, int paramCount) {
+        StringBuilder sb = new StringBuilder();
+        int paramIndex = 1;
+        int last = 0;
+        for (int i = 0; i < sql.length(); i++) {
+            char c = sql.charAt(i);
+            if (c == '?') {
+                sb.append(sql, last, i);
+                sb.append('$').append(paramIndex++);
+                last = i + 1;
+            }
+        }
+        sb.append(sql.substring(last));
         return sb.toString();
     }
 
