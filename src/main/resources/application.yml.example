@@ -6,7 +6,7 @@ spring:
     url: jdbc:http://your-endpoint.com/execute_sql
     username: yourUsername
     password: yourPassword
-    driver-class-name: com.adrielamoguis.utils.http_jdbc_driver.driver_impl.HttpJdbcDriver
+    driver-class-name: driver_impl.io.github.adrielamoguis.http_jdbc_driver.HttpJdbcDriver
 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect

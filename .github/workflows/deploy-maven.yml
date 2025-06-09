@@ -1,0 +1,29 @@
+name: Deploy driver_impl to Maven Central
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          server-id: ossrh
+          server-username: ${{ secrets.OSSRH_USERNAME }}
+          server-password: ${{ secrets.OSSRH_TOKEN }}
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
+
+      - name: Run unit tests
+        run: mvn -pl src/main/java/io/github/adrielamoguis/utils/http_jdbc_driver/driver_impl -am test
+
+      - name: Deploy driver_impl to Maven Central
+        run: mvn -pl src/main/java/io/github/adrielamoguis/utils/http_jdbc_driver/driver_impl -am deploy -DskipTests
