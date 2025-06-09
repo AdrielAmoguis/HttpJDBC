@@ -1,8 +1,9 @@
 package io.github.adrielamoguis.utils.http_jdbc_driver;
 
-import main.java.io.github.adrielamoguis.utils.http_jdbc_driver.db.ProxyDatabaseMetaData;
-import main.java.io.github.adrielamoguis.utils.http_jdbc_driver.db.ProxyPreparedStatement;
-import main.java.io.github.adrielamoguis.utils.http_jdbc_driver.db.ProxyStatement;
+import io.github.adrielamoguis.utils.http_jdbc_driver.db.ProxyStatement;
+import io.github.adrielamoguis.utils.http_jdbc_driver.db.ProxyDatabaseMetaData;
+import io.github.adrielamoguis.utils.http_jdbc_driver.db.ProxyPreparedStatement;
+import io.github.adrielamoguis.utils.http_jdbc_driver.db.ProxyStatement;
 
 import java.net.http.HttpClient;
 import java.sql.*;

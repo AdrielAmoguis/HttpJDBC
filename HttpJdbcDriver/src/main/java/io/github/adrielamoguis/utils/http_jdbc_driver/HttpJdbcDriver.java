@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Properties;
 
-import main.java.io.github.adrielamoguis.utils.http_jdbc_driver.dto.Request;
+import io.github.adrielamoguis.utils.http_jdbc_driver.dto.Request;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
