@@ -21,4 +21,4 @@ jobs:
           server-password: ${{ secrets.OSSRH_TOKEN }}
 
       - name: Publish driver_impl package
-        run: mvn --batch-mode -pl src/main/java/io/github/adrielamoguis/utils/http_jdbc_driver/driver_impl -am deploy
+        run: mvn --batch-mode -pl driver_impl -am deploy
