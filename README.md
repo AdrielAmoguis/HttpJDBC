@@ -17,7 +17,7 @@ spring:
     url: jdbc:http://your-endpoint.com
     username: yourUsername
     password: yourPassword
-    driver-class-name: io.github.adrielamoguis.utils.http_jdbc_driver.driver_impl.HttpJdbcDriver
+    driver-class-name: main.java.io.github.adrielamoguis.utils.http_jdbc_driver.HttpJdbcDriver
     
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
