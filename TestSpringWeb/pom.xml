@@ -35,12 +35,12 @@
 	<packaging>jar</packaging>
 
 	<distributionManagement>
-	    <repository>
-	        <id>8f11d2e4-cf33-457a-8965-ac07fd96f62a</id>
-	        <name>Central Repository OSSRH</name>
-	        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-	    </repository>
+		<repository>
+			<id>central</id>
+			<name>Central Repository OSSRH</name>
+		</repository>
 	</distributionManagement>
+
 
 	<dependencies>
 		<dependency>
