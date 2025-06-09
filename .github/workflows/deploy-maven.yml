@@ -14,11 +14,11 @@ jobs:
       - name: Set up Maven Central Repository
         uses: actions/setup-java@v4
         with:
-          java-version: '11'
+          java-version: '17'
           distribution: 'temurin'
           server-id: central
           server-username: ${{ secrets.OSSRH_USERNAME }}
           server-password: ${{ secrets.OSSRH_TOKEN }}
 
       - name: Publish HttpJdbcDriver package
-        run: mvn deploy
+        run: mvn deploy -pl HttpJdbcDriver
