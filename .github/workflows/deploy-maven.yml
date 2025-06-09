@@ -21,4 +21,4 @@ jobs:
           server-password: ${{ secrets.OSSRH_TOKEN }}
 
       - name: Publish HttpJdbcDriver package
-        run: mvn --batch-mode -N -pl HttpJdbcDriver deploy
+        run: mvn deploy
